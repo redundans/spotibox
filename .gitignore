@@ -1,3 +1,6 @@
+.DS_Store
+package-lock.json
+
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
@@ -16,6 +19,10 @@ wp-content/themes/twenty*/
 
 # ignore node dependency directories
 node_modules/
+
+# ignore composer vendor directories
+vendor/
+composer.lock
 
 # ignore log files and databases
 *.log
