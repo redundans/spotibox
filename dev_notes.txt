@@ -1,0 +1,23 @@
+KONCEPT
+- Webklient kan lägga till låtar i en list
+- Server kan spela upp och ta bort låtar
+
+ADMIN
+- Skapa Auth
+- Välj device
+- Skapa Playlist / rensa playlist
+- Sätta playing state (spelar eller ej)
+
+WEBKLIENT
+- Se lista
+- Se vad som spelas nu (cachad på servern)
+- Sök låtar
+- Lägg till i lista
+	future:
+	- Betala för att lägga till låtar
+
+SERVER JOB
+- Var X:e sekund kollar me/player/currently-playing om låten uppdaterats och är från PLAYLIST X.
+	- Om så ta bort föregående låt från listan.
+	- Uppdatera playerstate i Databasen
+	- Om playing state är på men inte state från currently-playing, börja spela
